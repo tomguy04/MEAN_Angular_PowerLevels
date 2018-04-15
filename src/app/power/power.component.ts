@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,EventEmitter,Output  } from '@angular/core';
 import {Power} from './power'
 
 @Component({
@@ -7,36 +7,20 @@ import {Power} from './power'
   styleUrls: ['./power.component.css']
 })
 export class PowerComponent {
-  power = new Power();
+  // 1 Create an Event in the TaskComponent
+  @Output() aTaskEventEmitter = new EventEmitter();
 
-  // powerLevel :number = 1;
-  // tasks: Power={
-  // powerObj: Power={
-  //   powerNumber : number
-  // }
-  onSubmit(){
-    console.log(this.power);
-    this.power = new Power();
+  // power = new Power();
+  myArray : Array<Power> = [];
+  myNumber : number;
+
+  onChange(){
+    // console.log(this.power);
+    // this.power = new Power();
+    // this.myArray.push(this.power);
+    console.log(this.myNumber);
   }
-//   tasks: Power[] = [
-//   {
-//     _id: 1,
-//     title: 'first task',
-//     completed: false,
-    
-//   },
-//   {
-//     _id: 2,
-//     title:'second task',
-//     completed: false
-//   }
-// ];
-
-// onSubmit(){
-//   console.log(this.powerLevel);
-//   this.powerLevel = 1;
-// }
-
+  
   constructor() { }
 }
 

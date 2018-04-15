@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, OnChanges, Output, EventEmitter } from '@angular/core';
 import {Power} from '../power';
 
 @Component({
@@ -8,9 +8,16 @@ import {Power} from '../power';
 })
 export class HumanComponent {
   // @Input() myTasks: Power[];
-  @Input() powers: Power[];
+  // @Input() powers: Power[];
+  @Input() myNumber: number;
 
   constructor() { }
+  
+
+  dataFromPower(eventData){
+    console.log(eventData);
+  }
+
 
   // ngOnInit() {
   // }
